@@ -1,3 +1,62 @@
+body {
+  display: block;
+  background-color: #02111b;
+  color: aliceblue;
+  font-family: sans-serif, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana;
+}
+
+a {
+  color: #ffbc42;
+  text-decoration: none;
+}
+
+header {
+  font-weight: bold;
+  background-color: #0496ff;
+  color: #02111b;
+  margin-bottom: 20px;
+  display: inline;
+  text-decoration: none;
+}
+
+nav li {
+  display: inline;
+  padding: 1rem;
+}
+
+#headerEmail {
+  display: inline;
+  float: right;
+}
+
+main {
+  background-color: #7dcfb6;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2%;
+}
+
+main img {
+  max-width: 400px;
+}
+
+section {
+  display: flex;
+}
+
+.portPages {
+  display: flex;
+  color: #02111b;
+}
+
 form {
   display: none;
+}
+
+footer {
+  min-height: 50px;
+  display: flex;
+  background-color: #0496ff;
+  margin-top: 20px;
 }
