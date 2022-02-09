@@ -13,9 +13,10 @@
 </head>
 <body>
     <header>
+        <img src="./assets/faviconInitials.png" alt="EO" id="headerImage">
         <div>
             <h1>Erik Oerke</h1>
-            <p>Web Developer & Boardgame Creator</p>
+            <p>Web Developer & <br> Boardgame Creator</p>
         </div>
         <nav>
             <ul>
@@ -24,21 +25,17 @@
                 <li><a href="#contactSection" alt="How to Contact Me">Contact</a></li>
             </ul>
         </nav>
-        <div id="headerEmail">
-            <h2> <a href="eeoerke@gmail.com"> eeoerke@gmail.com</a></h2>
-        </div>
     </header>
 
     <Main>
         <!-- Work -->
         <Section>
-            <div>
-                <h2 id="workPortfolio">My Work</h2>
+                <h2 id="workPortfolio">Portfolio</h2>
                 
                 <div class="portPages">
                     
                     <!-- Main Deploy (must be larger) -->
-                    <div id="primaryWork">
+                    <div class="primaryWork">
                         <!-- Screenshot -->
                         <img src="./assets/VaultSite.PNG" alt="a Screenshot of the Team Rex Games' Vault RPG Website homepage">
                         <!-- App Title -->
@@ -46,62 +43,70 @@
                         <!-- Desc -->
                         <p>Full Website for the Vault RPG utilizing Square Space Platform</p>
                         <!-- Link -->
-                        <button href="https://www.teamrexgames.com/" alt="Team Rex Games' Vault RPG Website">View</button>
+                        <form action="https://www.teamrexgames.com" target="_blank">
+                            <input type="submit" value="View"/>
+                        </form>
                     </div>
+                    <div class="secondaryBox">
+                        <div class="secondaryWorks">
+                            <!-- Screenshot -->
+                            <img src="./assets/VaultSite.PNG" alt="a Screenshot of the Team Rex Games' Vault RPG Website homepage">
+                            <!-- App Title -->
+                            <h3>Vault RPG</h3>
+                            <!-- Desc -->
+                            <p>Full Website for the Vault RPG utilizing Square Space Platform</p>
+                            <!-- Link -->
+                            <form action="https://www.teamrexgames.com" target="_blank">
+                                <input type="submit" value="View" />
+                            </form>
+                        </div>
 
-                    <div class="secondaryWorks">
-                        <!-- Screenshot -->
-                        <img src="..." alt="a Screenshot of ...">
-                        <!-- App Title -->
-                        <h3>Site 2</h3>
-                        <!-- Desc -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, vel!</p>
-                        <!-- Link -->
-                        <button href="..." alt="...">View</button>
+                        <div class="secondaryWorks">
+                            <!-- Screenshot -->
+                            <img src="./assets/VaultSite.PNG" alt="a Screenshot of the Team Rex Games' Vault RPG Website homepage">
+                            <!-- App Title -->
+                            <h3>Vault RPG</h3>
+                            <!-- Desc -->
+                            <p>Full Website for the Vault RPG utilizing Square Space Platform</p>
+                            <!-- Link -->
+                            <form action="https://www.teamrexgames.com" target="_blank">
+                                <input type="submit" value="View"/>
+                            </form>
+                        </div>
                     </div>
-
-                    <div class="secondaryWorks">
-                        <!-- Screenshot -->
-                        <img src="..." alt="a Screenshot of ...">
-                        <!-- App Title -->
-                        <h3>Site 2</h3>
-                        <!-- Desc -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, vel!</p>
-                        <!-- Link -->
-                        <button href="..." alt="...">View</button>
-                    </div>
-                    
                 </div>
-            </div>
         </Section>
         
         <!-- About Me -->
         <Section>
-            <div>
-                <h2 id="aboutSection">About Erik</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dignissimos, voluptatibus earum qui doloribus aliquid maiores quas rem provident, dolore commodi reprehenderit consequatur reiciendis nam ab doloremque quasi nulla! Perferendis, id sequi cumque maiores aliquam molestias vero dolore. Dolor ab iste facere ullam esse, perferendis doloremque sunt quidem vero deleniti!
-                </p>
-                <ul>
-                    <li>A desire to do better than the previous day.</li>
-                    <li>A strong sense of honesty and integrity.</li>
-                    <li>The grit to see things through and always be there for the team.</li>
-                </ul>
+            <h2 id="aboutSection">About</h2>
+            <div class="mainContent">
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dignissimos, voluptatibus earum qui doloribus aliquid maiores quas rem provident, dolore commodi reprehenderit consequatur reiciendis nam ab doloremque quasi nulla! Perferendis, id sequi cumque maiores aliquam molestias vero dolore. Dolor ab iste facere ullam esse, perferendis doloremque sunt quidem vero deleniti!
+                        <ul>
+                            <li>A desire to do better than the previous day.</li>
+                            <li>A strong sense of honesty and integrity.</li>
+                            <li>The grit to see things through and always be there for the team.</li>
+                        </ul>
+                    </p>
+                </div>
             </div>
         </Section>
         
         <!-- contact info -->
         <Section>
-            <div>
-                <h2 id="#contactSection">Contact Me</h2>
+            <h2 id="contactSection">Contact & Socials</h2>
+            <div class="mainContent">
                 <ul>
                     <li><a href="mailto:eeoerkeedu@gmail.com" alt="Erik's EDU Email link">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/erik-oerke-6a24bb8b/" alt="Erik's LinkIn link">LinkIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/erik-oerke-6a24bb8b/" alt="Erik's LinkedIn link">LinkedIn</a></li>
                     <li><a href="https://twitter.com/Littletzar" alt="Erik's Twitter link">Twitter</a></li>
                 </ul>
                 <!-- A "Contact Me Form" to use when we learn that aspect -->
                 <div>
                     
-                    <form action="/action_page.php">
+                    <form action="/action_page.php" id="contactForm">
                     
                         <label for="Org">Organization:</label><br>
                         <input type="text" id="Org" name="Org"><br>
