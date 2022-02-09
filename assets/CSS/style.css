@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: block;
   background-color: #02111b;
@@ -11,52 +15,202 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+.primaryWork,
+.secondaryWorks,
+.mainContent {
+  transition: all 0.5s ease-in-out;
+}
+
 header {
   font-weight: bold;
   background-color: #0496ff;
-  color: #02111b;
+  color: aliceblue;
   margin-bottom: 20px;
-  display: inline;
   text-decoration: none;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 100%;
+  position: relative;
 }
 
-nav li {
-  display: inline;
-  padding: 1rem;
+header h1 {
+  display: flex;
+  color: #02111b;
+  padding: 1%;
+  margin-bottom: 0.5%;
+}
+header p {
+  padding: 1%;
 }
 
-#headerEmail {
+#headerImage {
+  max-width: 150px;
+  display: flex;
+  margin: 1%;
+}
+
+nav ul {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  justify-content: right;
+  margin: 0%;
+}
+
+nav ul li {
   display: inline;
-  float: right;
+  padding-right: 5%;
 }
 
 main {
-  background-color: #7dcfb6;
-  display: flex;
+  display: flexbox;
   flex-wrap: wrap;
   margin: 2%;
 }
 
 main img {
-  max-width: 400px;
+  max-width: 40%;
 }
 
-section {
-  display: flex;
-}
-
-.portPages {
-  display: flex;
+main a {
   color: #02111b;
 }
 
-form {
+h2 {
+  font-family: Impact, sans-serif;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-left: 1%;
+  font-size: x-large;
+  margin-top: 5%;
+}
+
+h3 {
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.primaryWork:hover,
+.secondaryWorks:hover,
+.mainContent:hover,
+input:hover,
+a:hover {
+  box-shadow: inset 0px 0px 8px rgb(255, 0, 119), 0 0 15px rgb(255, 0, 64);
+  border-radius: 5px;
+  border: 1px solid #ffbc42;
+}
+.portPages {
+  display: flex;
+  flex-wrap: wrap;
+  color: #02111b;
+  width: 90%;
+  margin: 1%;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.primaryWork {
+  flex: 2 1 600px;
+  padding: 3%;
+  border-radius: 0px 15px 15px 15px;
+  margin: 1%;
+  background-color: #7dcfb6;
+  max-width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.secondaryBox {
+  display: flex;
+}
+
+.secondaryWorks {
+  flex: 1 1 200px;
+  display: inline-block;
+  padding: 3%;
+  border-radius: 0px 15px 15px 15px;
+  background-color: #7dcfb6;
+  margin: 1%;
+  max-width: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+input {
+  background-color: #02111b;
+  color: #ffbc42;
+  border-radius: 10%;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  color: #02111b;
+  background-color: #7dcfb6;
+  width: 80%;
+  margin: 2%;
+  padding: 3%;
+  border-radius: 0px 15px 15px 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+ul {
+  list-style-type: square;
+  font-size: larger;
+  color: #02111b;
+  margin: 1%;
+  padding: 1%;
+  font-weight: bolder;
+}
+
+#contactForm {
   display: none;
 }
 
 footer {
   min-height: 50px;
-  display: flex;
+  /* display: flex; */
   background-color: #0496ff;
   margin-top: 20px;
+}
+
+/* Tablets -  */
+@media screen and (max-width: 1100px) {
+  .primaryWork {
+    min-width: 100%;
+  }
+}
+
+/* Large smartphones -  */
+@media screen and (max-width: 768px) {
+  .secondaryBox {
+    flex-direction: column;
+  }
+  .secondaryWorks {
+    min-width: 90%;
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 705px) {
+  nav ul {
+    display: inline;
+    flex-wrap: wrap;
+    position: inherit;
+    justify-content: left;
+    left: 0;
+  }
+  header {
+    display: block;
+    padding-left: 1%;
+  }
+  .mainContent {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
