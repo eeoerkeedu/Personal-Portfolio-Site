@@ -1,7 +1,9 @@
+/* Making site scroll smoother */
 html {
   scroll-behavior: smooth;
 }
 
+/* setting up general body styling */
 body {
   display: block;
   background-color: #02111b;
@@ -10,11 +12,13 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana;
 }
 
+/* setting up links, particulalry the nav bar */
 a {
   color: #ffbc42;
   text-decoration: none;
 }
 
+/* adding transition effect for larger elements and links */
 a:hover,
 .primaryWork,
 .secondaryWorks,
@@ -22,6 +26,7 @@ a:hover,
   transition: all 0.5s ease-in-out;
 }
 
+/* header is a flexbox, and creating parent positioning */
 header {
   font-weight: bold;
   background-color: #0496ff;
@@ -35,22 +40,26 @@ header {
   position: relative;
 }
 
+/* personal name formatting */
 header h1 {
   display: flex;
   color: #02111b;
   padding: 1%;
   margin-bottom: 0.5%;
 }
+/* sub-title formatting */
 header p {
   padding: 1%;
 }
 
+/* formatting for icon image */
 #headerImage {
   max-width: 150px;
   display: flex;
   margin: 1%;
 }
 
+/* nav bar positioning */
 nav ul {
   display: flex;
   position: absolute;
@@ -60,25 +69,30 @@ nav ul {
   margin: 0%;
 }
 
+/* nav bar alignment */
 nav ul li {
   display: inline;
   padding-right: 5%;
 }
 
+/* general formatting for main */
 main {
-  display: flexbox;
   flex-wrap: wrap;
   margin: 2%;
 }
 
+/* setting maximums for page images */
 main img {
-  max-width: 40%;
+  max-width: 50%;
+  min-height: 200px;
 }
 
+/* setting color for in main links */
 main a {
   color: #02111b;
 }
 
+/* formatting h2 elements */
 h2 {
   font-family: Impact, sans-serif;
   font-weight: lighter;
@@ -88,12 +102,19 @@ h2 {
   margin-top: 5%;
 }
 
+/* formatting h3 elements */
 h3 {
   font-weight: bolder;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
+/* glow effect on focus or hover on select elements */
+.primaryWork:focus,
+.secondaryWorks:focus,
+.mainContent:focus,
+input:focus,
+a:focus,
 .primaryWork:hover,
 .secondaryWorks:hover,
 .mainContent:hover,
@@ -101,8 +122,9 @@ input:hover,
 a:hover {
   box-shadow: inset 0px 0px 8px rgb(255, 0, 119), 0 0 15px rgb(255, 0, 64);
   border-radius: 5px;
-  border: 1px solid #ffbc42;
 }
+
+/* maintaining flex display, creating box shape */
 .portPages {
   display: flex;
   flex-wrap: wrap;
@@ -112,6 +134,7 @@ a:hover {
   border-radius: 0px 15px 15px 15px;
 }
 
+/* fomatting main work element and flex growth */
 .primaryWork {
   flex: 2 1 600px;
   padding: 3%;
@@ -122,10 +145,19 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.secondaryBox {
-  display: flex;
+/* ensuring main project is the largest image */
+.primaryWork img {
+  max-width: 60%;
 }
 
+/* flex formatting for secondary projects outter div */
+.secondaryBox {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+
+/* setting flex limits and formatting secondary project's boxes */
 .secondaryWorks {
   flex: 1 1 200px;
   display: inline-block;
@@ -137,6 +169,7 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
+/* formatting the buttons to view other pages */
 input {
   background-color: #02111b;
   color: #ffbc42;
@@ -147,6 +180,7 @@ input {
   transition: all 0.5s ease-in-out;
 }
 
+/* formatting and flex settings for about and contact sections */
 .mainContent {
   display: flex;
   flex-wrap: wrap;
@@ -159,6 +193,7 @@ input {
   transition: all 0.5s ease-in-out;
 }
 
+/* formatting the lists in the main section */
 ul {
   list-style-type: square;
   font-size: larger;
@@ -168,31 +203,32 @@ ul {
   font-weight: bolder;
 }
 
+/* removing the contact form until it has framework to function */
 #contactForm {
   display: none;
 }
 
+/* minor formatting to footer */
 footer {
   min-height: 50px;
   /* display: flex; */
   background-color: #0496ff;
   margin-top: 20px;
-}
-
-/* Tablets -  */
-@media screen and (max-width: 1100px) {
-  .primaryWork {
-    min-width: 100%;
-  }
+  color: #02111b;
+  padding: 1%;
+  text-align: center;
 }
 
 /* Large smartphones -  */
 @media screen and (max-width: 768px) {
+  .primaryWork {
+    min-width: 100%;
+  }
   .secondaryBox {
     flex-direction: column;
   }
   .secondaryWorks {
-    min-width: 90%;
+    min-width: 100%;
   }
 }
 
